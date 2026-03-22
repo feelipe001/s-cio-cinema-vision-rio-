@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinema Visionário - Vagas</title>
+<style>
+body{margin:0;font-family:Arial, sans-serif;background:#0f0f0f;color:#fff}
+.container{max-width:900px;margin:auto;padding:20px}
+h1{font-size:28px;text-align:center}
+p{text-align:center;color:#ccc}
+.video{margin:20px 0;text-align:center}
+.box{background:#1a1a1a;padding:20px;border-radius:10px;margin-top:20px}
+label{display:block;margin-top:15px}
+input,select,textarea{width:100%;padding:10px;margin-top:5px;border:none;border-radius:5px}
+button{width:100%;padding:15px;margin-top:20px;background:#00c853;color:#fff;border:none;border-radius:8px;font-size:16px;cursor:pointer}
+button:hover{background:#00a844}
+.benefits li{margin-bottom:10px}
+.price{text-align:center;font-size:20px;margin-top:10px;color:#00c853}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Estamos abrindo apenas 3 vagas para novos colaboradores</h1>
+<p>Transforme seu celular em uma fonte de renda todos os dias</p>
+
+<div class="video">
+<iframe width="100%" height="250" src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class="box">
+<h2>Benefícios de ser sócio</h2>
+<ul class="benefits">
+<li>Suporte completo</li>
+<li>Materiais prontos de divulgação</li>
+<li>Grupo exclusivo de revendedores</li>
+<li>Estratégias testadas</li>
+<li>Modelo simples e validado</li>
+<li>Atualizações constantes</li>
+<li>Possibilidade de renda alta</li>
+<li>Treinamento inicial</li>
+<li>Acompanhamento</li>
+</ul>
+<p class="price">Investimento: R$197,00 por ano</p>
+</div>
+
+<div class="box">
+<h2>Questionário de Seleção</h2>
+
+<form id="form">
+
+<label>Nome completo</label>
+<input type="text" id="nome" required>
+
+<label>WhatsApp</label>
+<input type="text" id="whats" required>
+
+<label>Experiência com vendas</label>
+<select id="vendas">
+<option>Sim, tenho experiência</option>
+<option>Já tentei algumas vezes</option>
+<option>Nunca trabalhei com vendas</option>
+</select>
+
+<label>Sua situação atual</label>
+<select id="situacao">
+<option>Renda extra</option>
+<option>Renda principal</option>
+<option>Curioso</option>
+</select>
+
+<label>Tempo disponível por dia</label>
+<select id="tempo">
+<option>Menos de 1 hora</option>
+<option>1 a 2 horas</option>
+<option>2 a 4 horas</option>
+<option>Mais de 4 horas</option>
+</select>
+
+<label>Você é comunicativo?</label>
+<select id="comunicacao">
+<option>Sim</option>
+<option>Mais ou menos</option>
+<option>Não</option>
+</select>
+
+<label>Já utilizou IPTV?</label>
+<select id="iptv">
+<option>Sim</option>
+<option>Já usei</option>
+<option>Nunca</option>
+</select>
+
+<label>Disponibilidade para começar</label>
+<select id="inicio">
+<option>Imediatamente</option>
+<option>Talvez</option>
+<option>Não</option>
+</select>
+
+<label>Meta de ganho mensal</label>
+<select id="ganho">
+<option>Até 500</option>
+<option>500 a 1000</option>
+<option>1000 a 3000</option>
+<option>Mais de 3000</option>
+</select>
+
+<label>Por que você merece a vaga?</label>
+<textarea id="motivo"></textarea>
+
+<button type="button" onclick="enviarWhats()">Quero me candidatar agora</button>
+
+</form>
+</div>
+
+</div>
+
+<script>
+function enviarWhats(){
+let nome=document.getElementById('nome').value;
+let whats=document.getElementById('whats').value;
+let vendas=document.getElementById('vendas').value;
+let situacao=document.getElementById('situacao').value;
+let tempo=document.getElementById('tempo').value;
+let comunicacao=document.getElementById('comunicacao').value;
+let iptv=document.getElementById('iptv').value;
+let inicio=document.getElementById('inicio').value;
+let ganho=document.getElementById('ganho').value;
+let motivo=document.getElementById('motivo').value;
+
+let msg=`Olá, me candidatei:%0A
+Nome: ${nome}%0A
+WhatsApp: ${whats}%0A
+Vendas: ${vendas}%0A
+Situação: ${situacao}%0A
+Tempo: ${tempo}%0A
+Comunicação: ${comunicacao}%0A
+IPTV: ${iptv}%0A
+Início: ${inicio}%0A
+Ganho: ${ganho}%0A
+Motivo: ${motivo}`;
+
+window.open(`https://wa.me/5524999989882?text=${msg}`,'_blank');
+}
+</script>
+
+</body>
+</html>
